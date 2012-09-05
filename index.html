@@ -28,13 +28,35 @@
       <section id="main_content">
         <h3>Welcome to KrkMETAL page.</h3>
 
+<p>Hello! I'm Yaroslav Shukharev.</p>
+
+<p>I’m a programmer and guitarplayer from Russia.</p>
+
 <blockquote>
 <p>Without music, life would be a mistake. (с) Friedrich Nietzsche</p>
 </blockquote>
 
-<p>Hello! I'm Yaroslav Shukharev.</p>
+<pre><code>const char * NICK = "krkmetal";
 
-<p>I’m a programmer and guitarplayer from Russia. </p>
+void krkmetal_page() {
+    Page my_page = new Page;
+    my_page.title("KrkMETAL Page");
+    User krkmetal = new User;
+    krkmetal.first_name = "Yaroslav";
+    krkmetal.last_name = "Shukharev";
+    krkmetal.hobbies = {"programmer", "guitarplayer"};
+    krkmetal.location = "Russia";
+    my_page.add(krkmetal);
+    my_page.generate_contacts(NICK);
+    my_page.generate_page();
+    my_page.show();
+}
+
+int main() {
+    krkmetal_page();
+    return 0;
+}
+</code></pre>
 
 <hr><p>I'm on <a href="https://www.facebook.com/KrkMETAL">Facebook</a>, <a href="https://twitter.com/krkmetal">Twitter</a>, <a href="http://vk.com/krkmetal">VK.com</a> and <a href="https://plus.google.com/u/0/104175333419116200703/">Google+</a>.</p>
       </section>
